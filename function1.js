@@ -27,3 +27,24 @@ function x(){
     console.log(a,b)
 }
 x()
+
+function x(){
+    let a = 10
+    const b = 20
+    console.log(a,b)
+    function y(){
+        let p = "Js"
+        var q = "React"
+        console.log(p,q)
+        function z(){
+            const username = "Charan"
+        console.log(username)
+        console.log(a)
+        console.log(q)
+        }
+        z()
+    }
+    y()
+
+}
+x()
