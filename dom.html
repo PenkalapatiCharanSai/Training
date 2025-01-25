@@ -6,7 +6,9 @@
     <title>Dom</title>
 </head>
 <body>
-    <!--<h1 id = "demo">DOM</h1>
+
+
+     <!--<h1 id = "demo">DOM</h1>
     <div class="test">
 
     </div> -->
@@ -17,16 +19,23 @@
     <div class = "test">division4</div>
     <div class = "test">division5</div> -->
 
-    <h1 id="demo">Header</h1>
-
-    <div class="test">division1</div>
-    <div class="test">division2</div>
-    <div class="test">division3</div>
-    <div class="test">division4</div>
-    <div class="test">division5</div>
 
 
-
-    <script src="./dom.js"></script>
+    <div class="bgcolor">red</div>
+    <div class="bgcolor">blue</div>
+    <div class="bgcolor">green</div>
+    <div class="bgcolor">yellow</div>
+    <script>
+        let bgColor = document.querySelectorAll(".bgcolor");
+        [...bgColor].map(element => {
+            element.addEventListener("mouseover", () => {
+                element.style.backgroundColor = element.innerText;
+            });
+            element.addEventListener("mouseleave", () => {
+                element.style.backgroundColor = "transparent";
+            });
+        });
+    src="./dom.js"
+    </script>
 </body>
 </html>
