@@ -64,40 +64,102 @@
 
 
 // ! form
-document.addEventListener("DOMContentLoaded", () => {
-    let form = document.querySelector("form");
-    let name = document.querySelector("#uName");
-    let password = document.querySelector("#uPass");
-    let gender = document.querySelectorAll("[name='gender']");
-  
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-  
-      let un = name.value; 
-      let pass = password.value;
-      let gen = "";
+// document.addEventListener("DOMContentLoaded", () => {
+//     let form = document.getElementById("form");
+//     let name = document.getElementById("uName");
+//     let password = document.getElementById("uPass");
+//     let gender = document.getElementsByName("[name='gender']");
+//     let  check = document.getElementById("check");
+//     let show = document.getElementById("show");
 
-      for (let i = 0; i < gender.length; i++) {
-        if (gender[i].checked) {
-          gen = gender[i].value; 
-          break; 
-        }
-      }
+// //^
+// check.addEventListener("click",(event)=>{
+//   if(event.target.checked == true){
+//     password.setAttribute("type","text")
+//     show.innerText = "Hide Password"
+//   }else{
+//     password.setAttribute("type","text")
+//     show.innerText = "Show Password"
+//   }
+// })
+  
+//     form.addEventListener("submit", (event) => {
+//       event.preventDefault();
+  
+//       let un = name.value; 
+//       let pass = password.value;
+//       let gen = "";
+
+//       for (let i = 0; i < gender.length; i++) {
+//         if (gender[i].checked) {
+//           gen = gender[i].value; 
+//           break; 
+//         }
+//       }
   
    
-      let userDetails = {
-        username: un,
-        password: pass,
-        gender: gen,
-      };
+//       let userDetails = {
+//         username: un,
+//         password: pass,
+//         gender: gen,
+//       };
   
-      sessionStorage.setItem("userDetails", JSON.stringify(userDetails));
+//       sessionStorage.setItem("userDetails", JSON.stringify(userDetails));
 
      
-      console.log("User Details Saved to Session Storage:", userDetails);
-      console.log("Stored Data:", sessionStorage.getItem("userDetails"));
+//       console.log("User Details Saved to Session Storage:", userDetails);
+//       console.log("Stored Data:", sessionStorage.getItem("userDetails"));
   
-      console.log(userDetails);
-    });
-  });
+//       console.log(userDetails);
+//     });
+//   });
   
+
+
+
+  // !
+let form = document.querySelector("form");
+let username = document.getElementById("uName");
+let password = document.getElementById("uPass");
+let check = document.getElementById("check");
+let show = document.getElementById("show");
+
+let gender = document.getElementsByName("gender");
+// console.log(gender);
+
+
+
+// ! hiding and showing the password
+check.addEventListener("click",(event)=>{
+    // console.log(event.target.checked);
+    if(event.target.checked==true){
+        password.setAttribute("type","text");
+        show.inerText = "hide password";
+    }else{
+        password.setAttribute("type","password");
+        show.inerText = "show password";
+    }
+})
+
+form.addEventListener("submit" , event=>{
+  event.preventDefault();
+  let un = username.value;
+  let up = password.value;
+  let gen = "";
+  for(let i = 0;i<=gender.length-1;i++){
+      // console.log(gender[i].value);
+      // console.log(gender[i].checked);
+      if(gender[i].checked == true){
+          // console.log(gender[i].value);
+          gen += gender[i].value;
+      }
+  };
+  let userDetails={
+      username:un,
+      password:up,
+      gender:gen
+
+  };
+  console.log(userDetails);
+  sessionStorage.setItem("userData" ,JSON.stringify(userDetails) )
+})
