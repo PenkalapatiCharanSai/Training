@@ -1,0 +1,109 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script></script>
+</head>
+<body>
+    <h1 id="hello"></h1>
+    <script type = "module" src = "script1.js"></script>
+    <script type = "module" src="script2.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Signup Form</h2>
+    <form id="signupForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+        <div class="error" id="usernameError"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <div class="error" id="emailError"></div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <div class="error" id="passwordError"></div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+        <div class="error" id="confirmPasswordError"></div>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Clear previous error messages
+      document.getElementById('usernameError').textContent = '';
+      document.getElementById('emailError').textContent = '';
+      document.getElementById('passwordError').textContent = '';
+      document.getElementById('confirmPasswordError').textContent = '';
+
+      // Get form values
+      const username = document.getElementById('username').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+      let isValid = true;
+
+      // Validate username
+      if (!username) {
+        document.getElementById('usernameError').textContent = 'Username cannot be empty';
+        isValid = false;
+      }
+
+      // Validate email
+      if (!email) {
+        document.getElementById('emailError').textContent = 'Email cannot be empty';
+        isValid = false;
+      } else if (!email.includes('@')) {
+        document.getElementById('emailError').textContent = 'Invalid email format';
+        isValid = false;
+      }
+
+      // Validate password
+      if (!password) {
+        document.getElementById('passwordError').textContent = 'Password cannot be empty';
+        isValid = false;
+      } else if (password.length !== 6) {
+        document.getElementById('passwordError').textContent = 'Password must be exactly 6 characters long';
+        isValid = false;
+      }
+
+      // Validate confirm password
+      if (!confirmPassword) {
+        document.getElementById('confirmPasswordError').textContent = 'Confirm Password cannot be empty';
+        isValid = false;
+      } else if (password !== confirmPassword) {
+        document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+        isValid = false;
+      }
+
+      // If all validations pass, show success alert
+      if (isValid) {
+        alert('Form is submitted successfully');
+      }
+    });
+  </script>
+</body>
+</html>
