@@ -51,25 +51,62 @@ import React from 'react';
 // }
 // export default App;
 
-import Navbar from './components/Navbar';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import Sidebar1 from './components/Sidebar1';
-import Sidebar2 from './components/Sidebar2';
-class App extends React.Component{
-  render(){
-    return(
-      <div className="App">
-        <h1></h1>
-        <Navbar/>
-        <Main/>
-        <div className='side'>
-        <Sidebar1/>
-        <Sidebar2/>
+//^ web page
+// import Navbar from './components/Navbar';
+// import Main from './components/Main';
+// import Footer from './components/Footer';
+// import Sidebar1 from './components/Sidebar1';
+// import Sidebar2 from './components/Sidebar2';
+// class App extends React.Component{
+//   render(){
+//     return(
+//       <div className="App">
+//         <h1></h1>
+//         <Navbar/>
+//         <Main/>
+//         <div className='side'>
+//         <Sidebar1/>
+//         <Sidebar2/>
+//         </div>
+//         <Footer/>
+//       </div>
+//     )
+//   }
+// }
+// export default App;
+
+//^Props
+// import CBCProEx from"./propexample/CBCProEx";
+// class App extends React.Component{
+//   render(){
+//     return(
+//       <div>
+//         <CBCProEx
+//         name="Charan"
+//         age={19}
+//         hobbies={["playing freefire","watching movies"]}
+//         address={{city:"Anantapur", area:"Garladinne"}}
+//         isMarried={false}
+//         sendFun={function(){alert("Hi Charan")}}
+//         />
+//       </div>
+//     )
+
+//   }
+// }
+// export default App;
+import FBCPropex1 from './propexample/FBCPropex1';
+const App = () => {
+    return (
+        <div>
+            <FBCPropex1
+                username="Charan"
+                isLoggedIn={true}
+                profiles={["insta", "snapchat", "facebook", "Threads"]}
+            />
         </div>
-        <Footer/>
-      </div>
-    )
-  }
-}
+    );
+};
+
 export default App;
+
