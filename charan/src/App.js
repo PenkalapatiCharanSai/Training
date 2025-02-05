@@ -95,18 +95,38 @@ import React from 'react';
 //   }
 // }
 // export default App;
-import FBCPropex1 from './propexample/FBCPropex1';
-const App = () => {
-    return (
-        <div>
-            <FBCPropex1
-                username="Charan"
-                isLoggedIn={true}
-                profiles={["insta", "snapchat", "facebook", "Threads"]}
-            />
-        </div>
-    );
-};
+// import FBCPropex1 from './propexample/FBCPropex1';
+// const App = () => {
+//     return (
+//         <div>
+//             <FBCPropex1
+//                 username="Charan"
+//                 isLoggedIn={true}
+//                 profiles={["insta", "snapchat", "facebook", "Threads"]}
+//             />
+//         </div>
+//     );
+// };
+// export default App;
 
+//^props.children
+import PropsChildren from './propexample/PropsChildren';
+import SubChildrenProps from './propexample/SubChildrenProps';
+import Child1 from './propexample/Child1';
+import Child2 from './propexample/Child2';
+import Child3 from './propexample/Child3';
+const App = ()=>{
+    return(
+        <div>
+        <PropsChildren username="Charan" company="TCS">
+        <h1>This data is passing as a props to children to child component</h1>
+        <SubChildrenProps/>
+        </PropsChildren>
+        <Child1/>
+        <Child2/>
+        <Child3/>
+        </div>
+    )
+}
 export default App;
 
