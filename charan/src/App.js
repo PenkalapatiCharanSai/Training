@@ -110,23 +110,40 @@ import React from 'react';
 // export default App;
 
 //^props.children
-import PropsChildren from './propexample/PropsChildren';
-import SubChildrenProps from './propexample/SubChildrenProps';
-import Child1 from './propexample/Child1';
-import Child2 from './propexample/Child2';
-import Child3 from './propexample/Child3';
-const App = ()=>{
-    return(
-        <div>
-        <PropsChildren username="Charan" company="TCS">
-        <h1>This data is passing as a props to children to child component</h1>
-        <SubChildrenProps/>
-        </PropsChildren>
-        <Child1/>
-        <Child2/>
-        <Child3/>
-        </div>
-    )
-}
-export default App;
+// import PropsChildren from './propexample/PropsChildren';
+// import SubChildrenProps from './propexample/SubChildrenProps';
+// import Child1 from './propexample/Child1';
+// import Child2 from './propexample/Child2';
+// import Child3 from './propexample/Child3';
+// const App = ()=>{
+//     return(
+//         <div>
+//         <PropsChildren username="Charan" company="TCS">
+//         <h1>This data is passing as a props to children to child component</h1>
+//         <SubChildrenProps/>
+//         </PropsChildren>
+//         <Child1/>
+//         <Child2/>
+//         <Child3/>
+        
+//         </div>
+//     )
+// }
+// export default App;
 
+import CBCStateEx from './stateexample/CBCStateEx';
+import Counter from './stateexample/Counter';
+import FBCStateEx from './stateexample/FBCStateEx';
+const App=()=> {
+  
+    return (
+      <div>
+        <CBCStateEx/>
+        <Counter/>
+        <FBCStateEx/>
+      </div>
+      
+    )
+  }
+
+export default App;
