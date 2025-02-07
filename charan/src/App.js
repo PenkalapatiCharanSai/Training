@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+
 import React from 'react';
 
 // function App() {
@@ -131,19 +132,36 @@ import React from 'react';
 // }
 // export default App;
 
-import CBCStateEx from './stateexample/CBCStateEx';
-import Counter from './stateexample/Counter';
-import FBCStateEx from './stateexample/FBCStateEx';
-const App=()=> {
+//^ States
+// import CBCStateEx from './stateexample/CBCStateEx';
+// import Counter from './stateexample/Counter';
+// import FBCStateEx from './stateexample/FBCStateEx';
+// const App=()=> {
   
-    return (
-      <div>
-        <CBCStateEx/>
-        <Counter/>
-        <FBCStateEx/>
-      </div>
+//     return (
+//       <div>
+//         <CBCStateEx/>
+//         <Counter/>
+//         <FBCStateEx/>
+//       </div>
       
-    )
-  }
+//     )
+//   }
+
+// export default App;
+
+
+import FuctionalComponent from './components/FuctionalComponent';
+
+const App = () => {
+  return (
+    <div className='App'>
+      <h1>Welocme this is App.js</h1>
+    <FuctionalComponent 
+      clg='MRU' city="Hyderabad"
+    />  
+    </div>
+  );
+};
 
 export default App;
