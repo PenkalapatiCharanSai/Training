@@ -151,15 +151,29 @@ import React from 'react';
 // export default App;
 
 
-import FuctionalComponent from './components/FuctionalComponent';
+// import FuctionalComponent from './components/FuctionalComponent';
+
+// const App = () => {
+//   return (
+//     <div className='App'>
+//       <h1>Welocme this is App.js</h1>
+//     <FuctionalComponent 
+//       clg='MRU' city="Hyderabad"
+//     />  
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import ClassComponent from './components/ClassComponent';
+import MyForm from './components/MyForm';
 
 const App = () => {
   return (
     <div className='App'>
-      <h1>Welocme this is App.js</h1>
-    <FuctionalComponent 
-      clg='MRU' city="Hyderabad"
-    />  
+      {/* <ClassComponent/> */}
+      <MyForm/>
     </div>
   );
 };
