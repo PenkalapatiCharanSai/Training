@@ -171,10 +171,6 @@ basic hooks are:-
 3.useContext()
 
 
-
-
-
-
 Note :- 
 this keyword :- this keyword always target the current object.
 

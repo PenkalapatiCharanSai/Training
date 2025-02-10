@@ -165,15 +165,28 @@ import React from 'react';
 // };
 
 // export default App;
+//^Form
+// import ClassComponent from './components/ClassComponent';
+// import MyForm from './components/MyForm';
 
-import ClassComponent from './components/ClassComponent';
-import MyForm from './components/MyForm';
+// const App = () => {
+//   return (
+//     <div className='App'>
+//       {/* <ClassComponent/> */}
+//       <MyForm/>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+//^Hooks
+import UseEffectEx from './hooksexample/UseEffectEx';
 
 const App = () => {
   return (
-    <div className='App'>
-      {/* <ClassComponent/> */}
-      <MyForm/>
+    <div>
+      <UseEffectEx/>
     </div>
   );
 };
