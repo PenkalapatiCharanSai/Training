@@ -181,12 +181,15 @@ import React from 'react';
 // export default App;
 
 //^Hooks
-import UseEffectEx from './hooksexample/UseEffectEx';
-
+// import UseEffectEx from './hooksexample/UseEffectEx';
+import RefExample from './hooksexample/RefExample';
+import RefExample1 from './hooksexample/RefExample1';
 const App = () => {
   return (
-    <div>
-      <UseEffectEx/>
+    <div className='App'>
+      {/* <UseEffectEx/> */}
+      <RefExample/>
+      <RefExample1/>
     </div>
   );
 };
