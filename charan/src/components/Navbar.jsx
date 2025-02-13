@@ -1,12 +1,17 @@
-import React from "react";
-import global from "../global.css";
-class Navbar extends React.Component {
-  render() {
+import React from 'react';
+import Logo from './Logo';
+import Menu from './Menu';
+import Styles from "./navbar.module.css"
+const Navbar = () => {
     return (
-      <div className="navbar">
-        <h1>Navbar</h1>
-      </div>
-    );
-  }
+        <section id={Styles.navBlock}>
+        <article>
+        <Logo/>
+        <Menu/>
+        </article>
+        </section>
+       
+    )
 }
+
 export default Navbar;
