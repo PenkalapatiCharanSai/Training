@@ -83,7 +83,7 @@ components:-
 
 
 2.functional components:-
-************************
+*************************
 - this is similar to javascript function.
 - functional component is a "stateless component" until React v16.8, later FBC also becomes statefull because of "Hooks".
 
@@ -169,10 +169,36 @@ basic hooks are:-
 1.useState()
 2.useEffect()
 3.useContext()
+4.useRef()
 
 
 Note :- 
 this keyword :- this keyword always target the current object.
 
 
+2.useEffect():-
+***************
+- this hook allows developers to apply side affects in the components such as api fetching , updating inside the component etc..
 
+syntax:- useEffect(callbackfn , dependency);
+
+
+
+List & keys:- when we are listing the items in react we need to provide unique value
+for each and every list items with the help of key prop.
+
+React.Fragment:- it will act as a parent element fro the jsx elements but it wont create 
+	extra node on the dom tree.
+
+empty Fragment(<></>)
+<React.Fragment></React.Fragment>
+
+
+3.useRef():-
+************
+- it is used to target the native /real dom elements.
+- ref should be avoid using more in react.
+
+
+4.useContext API :-
+*******************

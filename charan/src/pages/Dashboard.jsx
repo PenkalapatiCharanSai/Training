@@ -23,7 +23,7 @@ const Dashboard = () => {
     };
 
     return (
-        <div>
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} /><br/>
                 <input type="email" placeholder="Email" value={mail} onChange={(e) => setMail(e.target.value)} /><br/>
