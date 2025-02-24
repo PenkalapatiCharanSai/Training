@@ -6,3 +6,23 @@ Routing in react:-
 
 - npm install react-router-dom@latest
 
+CRUD operations:-
+*****************
+C- create    - POST()
+R- read      - GET()
+U - update   - PUT()
+D - delete   -DELETE()
+
+https :- hyper text trasfer protocol secured
+http :- 
+smtp  , ftp , tcp , ip etc...
+
+- dummy json server to store the data and to act as a server.
+
+- we need to insta json server in the react application.
+
+        - npm install json-server -g
+
+axios library :- 
+
+npm install axios

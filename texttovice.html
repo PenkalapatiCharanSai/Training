@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech</title>
+</head>
+<body>
+    <textarea id="textArea" cols="30" rows="5" placeholder="Type something..."></textarea>
+    <br>
+    <button id="speakBtn">Speak</button>
+
+    <script>
+        let textArea = document.querySelector("#textArea");
+        let btn = document.querySelector("#speakBtn");
+        let speech = new SpeechSynthesisUtterance();
+
+        btn.addEventListener("click", () => {
+            speech.text = textArea.value;
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+</body>
+</html>

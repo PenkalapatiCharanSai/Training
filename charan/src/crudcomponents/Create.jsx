@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; 
 import "./Create.css";
 
 const Create = () => {
@@ -13,10 +15,13 @@ const Create = () => {
         e.preventDefault();
         axios.post("http://localhost:8000/users", { name, email, phone })
             .then(() => {
-                console.log("User added successfully");
-                navigate("/"); 
+                toast.success("User added successfully!");  
+                navigate("/");
             })
-            .catch(error => console.error("Error adding user:", error));
+            .catch((error) => {
+                console.error("Error adding user:", error);
+                toast.error("Failed to add user!");  
+            });
     };
 
     return (
