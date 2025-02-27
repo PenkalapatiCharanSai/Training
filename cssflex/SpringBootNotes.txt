@@ -1,0 +1,17 @@
+SpringBoot:
+-->Spring boot is an open source frame work which is built on top of spring frame work.
+-->With the helpof spring boot we can develop production ready application or web applications 
+   with minimal configuration. 
+
+MVC:
+-->Spring boot follows the MVC architecture pattren to develop web applications
+-->MVC means
+   M=>Model
+   V=>View
+   C=>Controller
+
+Ecart:
+-->AWS s3 Bucket
+-->MYSQL
+-->SPRING BOOT
+-->ReactJS
