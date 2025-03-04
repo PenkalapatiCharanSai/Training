@@ -4,7 +4,7 @@ SpringBoot:
    with minimal configuration. 
 
 MVC:
--->Spring boot follows the MVC architecture pattren to develop web applications
+-->Spring boot follows the MVC architecture pattren to develop web applications.
 -->MVC means
    M=>Model
    V=>View
@@ -15,3 +15,7 @@ Ecart:
 -->MYSQL
 -->SPRING BOOT
 -->ReactJS
+
+Annotations:
+-->Annotations are used to change the behaviour of java class or method.
+-->We will write annotations with help of "@".
