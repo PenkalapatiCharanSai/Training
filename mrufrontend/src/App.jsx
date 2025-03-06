@@ -1,15 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react';
 import './App.css'
-import Laptops from'./Laptops'
+import Laptops from './components/Laptops'
+import Mobiles from './components/Mobiles';
+import Watches from './components/Watches';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
-      <Laptops></Laptops>
-       
+
+       <Laptops/>
+       <hr></hr>
+       <Mobiles/>
+       <hr></hr>
+       <Watches/>
     </div>
   )
 }
