@@ -8,9 +8,9 @@ public class Watches {
 	@Id
 	private int id;
 	private String watch1;
-	private int cost;
+	private int cost; 
 	private String image;
-	private int qyt;
+	private int qty;
 	public int getId() {
 		return id;
 	}
@@ -36,27 +36,27 @@ public class Watches {
 		this.image = image;
 	}
 	public int getQyt() {
-		return qyt;
+		return qty;
 	}
 	public void setQyt(int qyt) {
-		this.qyt = qyt;
+		this.qty = qty;
 	}
 	@Override
 	public String toString() {
-		return "Watches [id=" + id + ", watch1=" + watch1 + ", cost=" + cost + ", image=" + image + ", qyt=" + qyt
+		return "Watches [id=" + id + ", watch1=" + watch1 + ", cost=" + cost + ", image=" + image + ", qty=" + qty
 				+ "]";
 	}
 	public Watches() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Watches(int id, String watch1, int cost, String image, int qyt) {
+	public Watches(int id, String watch1, int cost, String image, int qty) {
 		super();
 		this.id = id;
 		this.watch1 = watch1;
 		this.cost = cost;
 		this.image = image;
-		this.qyt = qyt;
+		this.qty = qty;
 	}
 	
 	
